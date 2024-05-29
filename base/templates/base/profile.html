@@ -1,0 +1,9 @@
+
+{% extends "main.html" %}
+
+{% block content %}
+   <a href="{% url "update" student.id %}">EDIT</a>
+   <a href="{% url "delete" student.id %}">DELETE</a>
+   <h1> {{student.name}} </h1>
+
+{% endblock content %}

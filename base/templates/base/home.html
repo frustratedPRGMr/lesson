@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<div>
+    <a href="{% url "register" %}">REGISTER STUDENT</a>
+    <div>
+       <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Settings</th>
+        </tr>
+        {% for student in stud  %}
+        <tr>
+            <td>{{student.id}}</td>
+            <td><a href="{% url "profile" student.id %}">{{student.name}}</a></td>
+            <td><a href="{% url "update" student.id %}"><input type="submit" value = "Update"></a> <a href="{% url "delete" student.id %}"><input type="submit" value= "Delete"></a></td>
+        </tr>
+    
+        {% endfor %}
+       </table>
+    </div>
+
+</div>
+
+
+{% endblock content %}
+
+
+

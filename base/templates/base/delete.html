@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+
+{% block content %}
+
+<form action="" method = "POST">
+    {% csrf_token %}
+    <p>DELETE {{student.name}}? </p>
+    <input type="submit" value="Confirm">
+</form>
+
+
+
+
+
+
+{% endblock content %}
